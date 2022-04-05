@@ -1,0 +1,38 @@
+.main-container {
+  height:fit-content;
+  position:bottom-left;
+  top: 360px;
+  height: 630px;
+    /* right: -20;
+  left: -130px; width: 160px; */
+}
+.toggle-sidenav{
+  /* border: 1px solid rgba(0, 0, 0, 0.5); */
+  height: 630px;
+  align-items: center;
+justify-content: center;
+display:inherit;
+width:400px;
+}
+
+.filter-btn{
+  border: 1px  #6e6d6d;
+  width:300px;
+  background-color: #ffff;
+}
+.btn-search{
+  top: 60px;
+}
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.example-radio-button {
+  margin: 5px;
+  color: #131313;
+  font-family: AmericanSansLight,Helvetica,sans-serif;
+  font-size: 14px;
+}

@@ -1,0 +1,77 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { MatSliderModule } from '@angular/material/slider';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
+
+
+
+
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FiltersComponent } from './filters/filters.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { AdminComponent } from './admin/admin.component';
+import { ArgAttributesComponent } from './arg-attributes/arg-attributes.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import {MatTableModule} from '@angular/material/table';
+import { SearchComponent } from './filters/search/search.component';
+import { AdminSettingsComponent } from './admin-settings/admin-settings.component';
+import { GeofeedComponent } from './geofeed/geofeed.component';
+import { EventComponent } from './home-page/event/event.component';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { MainPageComponent } from './main-page/main-page.component';
+import { FormsModule } from '@angular/forms';
+import { FlightsComponent } from './home-page/flights/flights.component';
+import {HttpClientModule} from '@angular/common/http';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    FiltersComponent,
+    //HomePageComponent,
+    AdminComponent,
+    routingComponents,//replaces the ArgAttributesComponent,MainPageComponent
+    NavbarComponent,
+    SearchComponent,
+    AdminSettingsComponent,
+    // GeofeedComponent,
+    EventComponent,
+    FlightsComponent,
+    //,
+
+  ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatSidenavModule,
+    MatListModule,
+    MatToolbarModule,
+    MatTableModule,
+    MatButtonModule,
+    MatRadioModule,
+    MatExpansionModule,
+    MatTabsModule,
+    AppRoutingModule,
+    MatCardModule,
+    MatInputModule,
+    FormsModule,
+    MatButtonToggleModule,
+    HttpClientModule
+
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }

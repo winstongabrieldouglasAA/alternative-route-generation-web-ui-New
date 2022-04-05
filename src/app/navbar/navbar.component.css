@@ -1,0 +1,23 @@
+.mat-toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #0078D2;
+  color: #faf4f4;
+  font-weight: 600;
+}
+
+.navbar img {
+  margin: 0 19px;
+  justify-content:inherit;
+}
+.Navbar{
+  justify-content:space-between;
+}
+span{
+  padding-right: 1rem;
+}
