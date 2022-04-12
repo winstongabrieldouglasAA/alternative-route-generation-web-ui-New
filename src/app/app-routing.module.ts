@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { HomePageComponent } from './home-page/home-page.component';
-import {ArgAttributesComponent} from './arg-attributes/arg-attributes.component'
+import { HomePageComponent } from './Flight-Routes/home-page.component';
+import {ArgAttributesComponent} from './Reroutings/arg-attributes.component'
 import { GeofeedComponent } from './geofeed/geofeed.component';
-import { MainPageComponent } from './main-page/main-page.component';
-import { AdminComponent } from './admin/admin.component';
-import { FlightsComponent } from './home-page/flights/flights.component';
+import { MainPageComponent } from './Flight-Schedule/main-page.component';
+import { AdminComponent } from './RecordLocator/admin.component';
+import { FlightsComponent } from './Flight-Routes/flights/flights.component';
 
 const routes: Routes = [
 

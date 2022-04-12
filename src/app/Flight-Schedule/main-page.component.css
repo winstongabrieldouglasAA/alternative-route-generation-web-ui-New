@@ -2,21 +2,34 @@
   box-sizing: border-box;
 }
 
-.box {
+.bx2 {
   align-content:center;
   float:left;
-  width: 25%;
-  padding: 50px;
-  height: 254px;
+  border-radius: 25px;
+  border: 2px solid lightskyblue;
+  padding: 20px;
+  width: 230px;
+  height: 190px;
   margin: 10px;
   color: #ffff;
   margin-top: 160px;
   text-align-last: center;
   font-size: 24px;
   font-family:AmericanSansLight,Helvetica,sans-serif;
+  margin-left: 150px
+}
+.bx1{
+  border-radius: 25px;
+  border: 2px solid lightskyblue;
+  padding: 20px;
+  width: 230px;
+  height: 190px;
+  margin-top: 160px;
+  text-align-last: center;
+  font-size: 15px;
+  font-family:AmericanSansLight,Helvetica,sans-serif;
   margin-left: 100px
 }
-
 .clearfix::after {
   content: "";
   clear: both;
@@ -31,19 +44,20 @@
 }
 
 /* Create three equal columns that floats next to each other */
-.column {
+/* .column {
   float: left;
   width: 25.33%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  height: 100px;
   background-color: lightskyblue;
   margin: 10px;
 }
+ */
 
 /* Clear floats after the columns */
-.row:after {
+/* .row:after {
   content: "";
   display: table;
   clear: both;
 
-}
+} */
