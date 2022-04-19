@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <br>
-<div><mat-card class="header-card">Aircraft Reroutings <br>
+<div><mat-card class="header-card">Flight Routes <br>
   <mat-form-field class="input-searchbar" appearance="fill">
   </mat-form-field>
   </mat-card>
@@ -9,8 +9,17 @@
   <form class="example-form">
     <mat-form-field class="example-full-width" appearance="fill">
       <mat-label *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">Ariport Code</mat-label>
-      <input matInput #message maxlength="256" placeholder="Ex. DFW">
-      <mat-hint align="start" ><strong>EX:DFW</strong> </mat-hint>
+      <input matInput #message maxlength="256" placeholder="Departure:">
+      <mat-hint align="start" ><strong>Departure:DFW</strong> </mat-hint>
+      <mat-hint align="end" >{{message.value.length}} / 256</mat-hint>
+    </mat-form-field>
+  </form>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">Ariport Code</mat-label>
+      <input matInput #message maxlength="256" placeholder="Arrival:">
+      <mat-hint align="start" ><strong>Arrival:PHX</strong> </mat-hint>
       <mat-hint align="end" >{{message.value.length}} / 256</mat-hint>
     </mat-form-field>
   </form>
