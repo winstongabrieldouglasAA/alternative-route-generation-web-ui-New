@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-import flights from './flights/flights.json';
+import { ArgFlightsServiceService } from '../arg-flights-service.service';
+import { RestService } from '../rest.service';
+import { flights } from '../flights';
 //table data-imports:
 export interface Aircraft {
   INBOUND: string;
@@ -54,61 +55,10 @@ const Flights_DATA: Routes[] = [
     latestArrivalTime: "2022-03-29T02:32:00",
     intOrDom: "D"
   },
-  {
-    flightNumber: "2673",
-    originationDate: "2022-03-28",
-    departureStation: "DFW",
-    arrivalStation: "PSP",
-    latestDepartureTime: "2022-03-28T13:51:00",
-    latestArrivalTime: "2022-03-28T17:01:00",
-    intOrDom: "D"
-  },
-  {
-    flightNumber: "1884",
-    originationDate: "2022-03-28",
-    departureStation: "PSP",
-    arrivalStation: "PHX",
-    latestDepartureTime: "2022-03-28T20:17:00",
-    latestArrivalTime: "2022-03-28T21:30:00",
-    intOrDom: "D"
-  },
-  {
-    flightNumber: "0820",
-    originationDate: "2022-03-28",
-    departureStation: "PHX",
-    arrivalStation: "LAX",
-    latestDepartureTime: "2022-03-29T03:25:00",
-    latestArrivalTime: "2022-03-29T06:50:00",
-    intOrDom: "D"
-  },
-
-  {
-    flightNumber: "1820",
-    originationDate: "2022-03-28",
-    departureStation: "DFW",
-    arrivalStation: "ONT",
-    latestDepartureTime: "2022-03-28T13:45:00",
-    latestArrivalTime: "2022-03-28T16:56:00",
-    intOrDom: "D"
-  },
-  {
-    flightNumber: "1792",
-    originationDate: "2022-03-28",
-    departureStation: "ONT",
-    arrivalStation: "PHX",
-    latestDepartureTime: "2022-03-28T19:14:00",
-    latestArrivalTime: "2022-03-28T20:25:00",
-    intOrDom: "D"
-  },
-  {
-    flightNumber: '1209', originationDate: "2022-03-28",
-    departureStation: "PHX",
-    arrivalStation: "LAX",
-    latestDepartureTime: "2022-03-29T01:04:00",
-    latestArrivalTime: "2022-03-29T02:32:00",
-    intOrDom: "D"
-  }
 ];
+
+
+
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -122,9 +72,26 @@ export class HomePageComponent implements OnInit {
     dataSourceb = Flights_DATA;
     dataSource = ELEMENT_DATA;
     value = '';
-  constructor() { }
+  constructor(private rs : RestService) {}
+
+columns= ["Flight Number", "origination Date", "departure Station", "arrival Station", "latest DepartureTime", "latest ArrivalTime","intOrDom"];
+
+index=["flightNumber", "originationDate", "departureStation", "arrivalStation", "latestDepartureTime", "latestArrivalTime","intOrDom"]
+
+flight : flights[] = [];
 
   ngOnInit(): void {
+    this.rs.getflights().subscribe
+    (
+      (response) =>
+      {
+        this.flight = response;
+      },
+      (error) =>
+      {
+        console.log("Error Occured"+ error);
+      }
+    )
   }
 
     }

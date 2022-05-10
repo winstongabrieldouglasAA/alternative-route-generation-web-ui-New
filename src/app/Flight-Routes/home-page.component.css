@@ -1,7 +1,7 @@
 table {
   width: 70%;
   position:relative;
-  height: 660px;
+  height: 60px;
   left: 310px;
   top: 15px;
   background-color: rgb(250,250,250);
@@ -14,11 +14,6 @@ table {
 .h2{
   font-size: 14px;
   font-family:AmericanSansLight,Helvetica,sans-serif;
-}
-
-.EventsSection{
-  columns: 100px 1;
-
 }
 .header-card{
   width: 70%;
@@ -38,4 +33,7 @@ table {
   color: #777;
   font-family: AmericanSansLight,Helvetica,sans-serif;
   font-size: 10px;
+}
+.nonstop{
+  left: 140%;
 }
