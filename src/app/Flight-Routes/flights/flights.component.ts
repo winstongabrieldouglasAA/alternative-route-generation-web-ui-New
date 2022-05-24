@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // import { RestService } from './rest.service';
 // import { FlightRoutes } from './FlightRoutes';
-
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-flights',
@@ -21,7 +21,7 @@ headers = [ "Flight Number","Origination Date",
 
 rows =[
   {
-    "flightNumber": "2673",
+    "flight Number": "2673",
     "originationDate": "2022-03-28",
     "departureStation": "DFW",
     "arrivalStation": "PSP",

@@ -1,6 +1,19 @@
 <app-navbar></app-navbar>
 <br><br>
-<mat-card class="header-card">Aircraft Reroutings <br>
+<div style="margin-left:100px; margin-right:100px; margin-top:80px"><h2>
+Depart from DFW to LAX
+</h2>
+<h4>Friday, April 22, 2022</h4>
+<div *ngFor="let Route of Flights_DATA" style="margin-bottom:20px;display:flex;justify-content:space-between;background-color:white;padding:13px;border-radius:6px">
+  <p>{{Route.flightNumber}}</p>
+  <p>{{Route.departureStation}}</p>
+  <p>{{Route.arrivalStation}}</p>
+  <p>{{Route.latestDepartureTime}}</p>
+  <p>{{Route.latestArrivalTime}}</p>
+</div>
+</div>
+
+<!--- <mat-card class="header-card">Aircraft Reroutings <br>
 <mat-form-field class="input-searchbar" appearance="fill">
   <mat-label>SEARCH FLIGHT</mat-label>
   <input matInput type="text" [(ngModel)]="value">
@@ -9,6 +22,7 @@
   </button>
 </mat-form-field>
 </mat-card>
+-->
 <!---<div class="table mat-table">
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -54,32 +68,31 @@
 </mat-radio-group>
 </div> -->
 
-<div class="table mat-table">
+<!-- <div class="table mat-table">
   <table mat-table [dataSource]="dataSourceb" class="mat-elevation-z8">
 
-    <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
     <!-- Position Column -->
-    <ng-container matColumnDef="flightNumber">
+    <!-- <ng-container matColumnDef="flightNumber">
       <th mat-header-cell *matHeaderCellDef> FlightNumber </th>
       <td mat-cell *matCellDef="let element"> {{element.flightNumber}} </td>
-    </ng-container>
+    </ng-container> --> 
 
-    <!-- Name Column -->
+    <!-- Name Column
     <ng-container matColumnDef="departureStation">
       <th mat-header-cell *matHeaderCellDef> departureStation </th>
       <td mat-cell *matCellDef="let element"> {{element.departureStation}} </td>
     </ng-container>
 
     <!-- Weight Column -->
-    <ng-container matColumnDef="originationDate">
+    <!-- <ng-container matColumnDef="originationDate">
       <th mat-header-cell *matHeaderCellDef> originationDate </th>
       <td mat-cell *matCellDef="let element"> {{element.originationDate}} </td>
-    </ng-container>
+    </ng-container> -->
 
     <!-- Symbol Column -->
-    <ng-container matColumnDef="arrivalStation">
+    <!-- <ng-container matColumnDef="arrivalStation">
       <th mat-header-cell *matHeaderCellDef> arrivalStation </th>
       <td mat-cell *matCellDef="let element"> {{element.arrivalStation}} </td>
     </ng-container>
@@ -101,8 +114,8 @@
 
     <tr mat-header-row *matHeaderRowDef="displayedColumnsB"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumnsB;"></tr>
-  </table>
-<br><br>
-<div class="EventsSection">
+  </table> --> 
+
+<!-- <div class="EventsSection">
   <app-event></app-event>
-</div>
+</div> -->
