@@ -1,16 +1,34 @@
-<app-navbar></app-navbar>
-<br><br>
-<div style="margin-left:100px; margin-right:100px; margin-top:80px"><h2>
-Depart from DFW to LAX
-</h2>
-<h4>Friday, April 22, 2022</h4>
-<div *ngFor="let Route of Flights_DATA" style="margin-bottom:20px;display:flex;justify-content:space-between;background-color:white;padding:13px;border-radius:6px">
-  <p>{{Route.flightNumber}}</p>
-  <p>{{Route.departureStation}}</p>
-  <p>{{Route.arrivalStation}}</p>
-  <p>{{Route.latestDepartureTime}}</p>
-  <p>{{Route.latestArrivalTime}}</p>
-</div>
+<app-navbar></app-navbar> <br /><br />
+<div style="margin-left: 280px; margin-right: 280px; margin-top: 50px">
+  <h2 style="margin-bottom: 0px">
+    <span style="color: #008712">Depart </span>
+    <span style="color: #00467f">from DFW to LAX</span>
+  </h2>
+  <h4 style="color: #627a88; margin-bottom: 50px">Friday, April 22, 2022</h4>
+  <div
+    *ngFor="let Route of Flights_DATA"
+    style="margin-bottom: 20px; background-color: white; border-radius: 6px"
+  >
+    <div
+      *ngFor="let Flight of Route; index as flightIndex"
+      style="display: flex; justify-content: space-between; padding: 13px"
+      [ngStyle]="{
+        'border-bottom':
+          Route.length > 1 && flightIndex !== Route.length - 1
+            ? '1px dashed #D0DAE0'
+            : '0px dashed #D0DAE0'
+      }"
+    >
+      <div style="display: flex">
+        <img src="../assets/logo.png" height="24px" width="24px" />
+        <p>{{ Flight.flightNumber }}</p>
+      </div>
+      <p>{{ Flight.departureStation }}</p>
+      <p>{{ Flight.arrivalStation }}</p>
+      <p>{{ Flight.latestDepartureTime }}</p>
+      <p>{{ Flight.latestArrivalTime }}</p>
+    </div>
+  </div>
 </div>
 
 <!--- <mat-card class="header-card">Aircraft Reroutings <br>
@@ -29,25 +47,25 @@ Depart from DFW to LAX
    Note that these columns can be defined in any order.
         The actual rendered columns are set as a property on the row definition" -->
 
-  <!-- Position Column
+<!-- Position Column
   <ng-container matColumnDef="AIRCRAFT">
     <th mat-header-cell *matHeaderCellDef> AIRCRAFT No. </th>
     <td mat-cell *matCellDef="let element"> {{element.AIRCRAFT}} </td>
   </ng-container>
 -->
-  <!-- Name Column
+<!-- Name Column
   <ng-container matColumnDef="INBOUND">
     <th mat-header-cell *matHeaderCellDef> Arrival-Station </th>
     <td mat-cell *matCellDef="let element"> {{element.INBOUND}} </td>
   </ng-container>
 -->
-  <!-- Weight Column
+<!-- Weight Column
   <ng-container matColumnDef="OUTBOUND">
     <th mat-header-cell *matHeaderCellDef> Departure-Station </th>
     <td mat-cell *matCellDef="let element"> {{element.OUTBOUND}} </td>
   </ng-container>
 -->
-  <!-- Symbol Column
+<!-- Symbol Column
   <ng-container matColumnDef="IntOrDom">
     <th mat-header-cell *matHeaderCellDef> Int/Dom </th>
     <td mat-cell *matCellDef="let element"> {{element.IntOrDom}} </td>
@@ -73,26 +91,26 @@ Depart from DFW to LAX
 
           The actual rendered columns are set as a property on the row definition" -->
 
-    <!-- Position Column -->
-    <!-- <ng-container matColumnDef="flightNumber">
+<!-- Position Column -->
+<!-- <ng-container matColumnDef="flightNumber">
       <th mat-header-cell *matHeaderCellDef> FlightNumber </th>
       <td mat-cell *matCellDef="let element"> {{element.flightNumber}} </td>
-    </ng-container> --> 
+    </ng-container> -->
 
-    <!-- Name Column
+<!-- Name Column
     <ng-container matColumnDef="departureStation">
       <th mat-header-cell *matHeaderCellDef> departureStation </th>
       <td mat-cell *matCellDef="let element"> {{element.departureStation}} </td>
     </ng-container>
 
     <!-- Weight Column -->
-    <!-- <ng-container matColumnDef="originationDate">
+<!-- <ng-container matColumnDef="originationDate">
       <th mat-header-cell *matHeaderCellDef> originationDate </th>
       <td mat-cell *matCellDef="let element"> {{element.originationDate}} </td>
     </ng-container> -->
 
-    <!-- Symbol Column -->
-    <!-- <ng-container matColumnDef="arrivalStation">
+<!-- Symbol Column -->
+<!-- <ng-container matColumnDef="arrivalStation">
       <th mat-header-cell *matHeaderCellDef> arrivalStation </th>
       <td mat-cell *matCellDef="let element"> {{element.arrivalStation}} </td>
     </ng-container>
@@ -114,7 +132,7 @@ Depart from DFW to LAX
 
     <tr mat-header-row *matHeaderRowDef="displayedColumnsB"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumnsB;"></tr>
-  </table> --> 
+  </table> -->
 
 <!-- <div class="EventsSection">
   <app-event></app-event>
