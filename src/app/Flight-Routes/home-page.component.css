@@ -1,39 +1,34 @@
 table {
   width: 70%;
   position:relative;
-  height: 60px;
-  left: 310px;
-  top: 15px;
+  height: 45px;
+  margin-top: 120px;
   background-color: rgb(250,250,250);
-  font-size: 24px;
-  font-family:AmericanSansLight,Helvetica,sans-serif;
-}
-.mat-radio-button ~ .mat-radio-button {
-  margin-left: 16px;
-}
-.h2{
   font-size: 14px;
+  margin-left: 220px;
   font-family:AmericanSansLight,Helvetica,sans-serif;
 }
-.header-card{
-  width: 70%;
-  position:relative;
-  background-color: rgb(250,250,250);
-  left: 310px;
-  top: 10px;
-  font-family: AmericanSansLight,Helvetica,sans-serif;
-  font-size: 20px;
-  color: #777;
-  width: 1095px;
-  height: 30px;
+
+.table-container {
+  margin-top: 500px;
 }
-.input-searchbar{
-  left: 870px;
-  top: -20px;
-  color: #777;
-  font-family: AmericanSansLight,Helvetica,sans-serif;
-  font-size: 10px;
+.nonstop, .twostop, .multistop{
+  width: 90%;
+  margin-left: 80px;
+  box-shadow: 5px 5px 20px rgb(108, 102, 108);
 }
-.nonstop{
-  left: 140%;
+
+.tabledata{
+  border-collapse: separate;
+  table-layout: fixed;
+  width: 80%;
+  border-spacing: 170px 30px;
+  padding-top: 20px;
+  border-width: 5px 0;
+  padding: 10px 15px;
+}
+.block{
+ padding-right: 160px;
+
+  margin-top: 80px;
 }

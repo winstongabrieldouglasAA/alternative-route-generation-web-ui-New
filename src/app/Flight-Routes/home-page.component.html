@@ -1,175 +1,62 @@
 <app-navbar></app-navbar>
-<br><br>
-<mat-card class="header-card">Depart <br>
-<mat-form-field class="input-searchbar" appearance="fill">
-  <mat-label>SEARCH FLIGHT</mat-label>
-  <input matInput type="text" [(ngModel)]="value">
-  <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-    <mat-icon>x</mat-icon>
-  </button>
-</mat-form-field>
-</mat-card>
-<!---<div class="table mat-table">
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<div class="main-container">
 
-   Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
-
-  <!-- Position Column
-  <ng-container matColumnDef="AIRCRAFT">
-    <th mat-header-cell *matHeaderCellDef> AIRCRAFT No. </th>
-    <td mat-cell *matCellDef="let element"> {{element.AIRCRAFT}} </td>
-  </ng-container>
--->
-  <!-- Name Column
-  <ng-container matColumnDef="INBOUND">
-    <th mat-header-cell *matHeaderCellDef> Arrival-Station </th>
-    <td mat-cell *matCellDef="let element"> {{element.INBOUND}} </td>
-  </ng-container>
--->
-  <!-- Weight Column
-  <ng-container matColumnDef="OUTBOUND">
-    <th mat-header-cell *matHeaderCellDef> Departure-Station </th>
-    <td mat-cell *matCellDef="let element"> {{element.OUTBOUND}} </td>
-  </ng-container>
--->
-  <!-- Symbol Column
-  <ng-container matColumnDef="IntOrDom">
-    <th mat-header-cell *matHeaderCellDef> Int/Dom </th>
-    <td mat-cell *matCellDef="let element"> {{element.IntOrDom}} </td>
-  </ng-container>
-
-  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-</div>
-<br>
-  <br>
-    <br>-->
-<!-- <div>
-  <mat-radio-group aria-label="Select an option">
-  <mat-radio-button value="1">Nonstop </mat-radio-button>
-  <mat-radio-button value="2">One-Stop </mat-radio-button>
-  <mat-radio-button value="3">Two-Stop </mat-radio-button>
-</mat-radio-group>
-</div> -->
-
-<div class="table mat-table"><p id="nonstop">Nonstop</p>
-
-  <table mat-table [dataSource]="dataSourceb" class="mat-elevation-z8">
-        <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-
-    <!-- Position Column -->
-    <ng-container matColumnDef="flightNumber">
-      <th mat-header-cell *matHeaderCellDef> FlightNumber </th>
-      <td mat-cell *matCellDef="let element"> {{element.flightNumber}} </td>
-    </ng-container>
-
-    <!-- Name Column -->
-    <ng-container matColumnDef="departureStation">
-      <th mat-header-cell *matHeaderCellDef> departureStation </th>
-      <td mat-cell *matCellDef="let element"> {{element.departureStation}} </td>
-    </ng-container>
-
-    <!-- Weight Column -->
-    <ng-container matColumnDef="originationDate">
-      <th mat-header-cell *matHeaderCellDef> originationDate </th>
-      <td mat-cell *matCellDef="let element"> {{element.originationDate}} </td>
-    </ng-container>
-
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="arrivalStation">
-      <th mat-header-cell *matHeaderCellDef> arrivalStation </th>
-      <td mat-cell *matCellDef="let element"> {{element.arrivalStation}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="latestDepartureTime">
-      <th mat-header-cell *matHeaderCellDef> LatestDepartureTime </th>
-      <td mat-cell *matCellDef="let element"> {{element.latestDepartureTime}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="latestArrivalTime">
-      <th mat-header-cell *matHeaderCellDef> latestArrivalTime </th>
-      <td mat-cell *matCellDef="let element"> {{element.latestArrivalTime}} </td>
-    </ng-container>
-
-    <ng-container matColumnDef="intOrDom">
-      <th mat-header-cell *matHeaderCellDef> intOrDom </th>
-      <td mat-cell *matCellDef="let element"> {{element.intOrDom}} </td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumnsB"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumnsB;"></tr>
-  </table>
-<br><br>
-  <div class="table mat-table">
-    <table mat-table [dataSource]="dataSourceb" class="mat-elevation-z8">
-
-      <!--- Note that these columns can be defined in any order.
-            The actual rendered columns are set as a property on the row definition" -->
-
-      <!-- Position Column -->
-      <ng-container matColumnDef="flightNumber">
-        <th mat-header-cell *matHeaderCellDef> One Stop </th>
-        <td mat-cell *matCellDef="let element"> {{element.flightNumber}} </td>
-      </ng-container>
-
-      <!-- Name Column -->
-      <ng-container matColumnDef="departureStation">
-        <th mat-header-cell *matHeaderCellDef> </th>
-        <td mat-cell *matCellDef="let element"> {{element.departureStation}} </td>
-      </ng-container>
-
-      <!-- Weight Column -->
-      <ng-container matColumnDef="originationDate">
-        <th mat-header-cell *matHeaderCellDef> </th>
-        <td mat-cell *matCellDef="let element"> {{element.originationDate}} </td>
-      </ng-container>
-
-      <!-- Symbol Column -->
-      <ng-container matColumnDef="arrivalStation">
-        <th mat-header-cell *matHeaderCellDef> </th>
-        <td mat-cell *matCellDef="let element"> {{element.arrivalStation}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="latestDepartureTime">
-        <th mat-header-cell *matHeaderCellDef> </th>
-        <td mat-cell *matCellDef="let element"> {{element.latestDepartureTime}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="latestArrivalTime">
-        <th mat-header-cell *matHeaderCellDef> </th>
-        <td mat-cell *matCellDef="let element"> {{element.latestArrivalTime}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="intOrDom">
-        <th mat-header-cell *matHeaderCellDef> </th>
-        <td mat-cell *matCellDef="let element"> {{element.intOrDom}} </td>
-      </ng-container>
-
-      <tr mat-header-row *matHeaderRowDef="displayedColumnsB"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumnsB;"></tr>
+  <div class="all-headers">
+    <div class="header-col">
+      <table class="block">
+      <th >NonStop</th>
     </table>
+    <table class="nonstop">
+        <th *ngFor="let column of headers">
+          {{column}}
+        </th>
+      </table>
+      <div class="tabledata">
+        <tr *ngFor="let row of rows">
+          <td *ngFor="let column of headers" >
+            {{row[column]}}
+          </td>
+        </tr>
+     </div>
+    </div>
+    </div>
+    <div class="header-col">
+      <table class="block">
+      <th >Two-Stop</th>
+    </table>
+    <table class="twostop">
+        <th *ngFor="let column of headers">
+          {{column}}
+        </th>
+      </table>
+      <div class="tabledata">
+        <tr *ngFor="let row of rows2">
+          <td *ngFor="let column of headers" >
+            {{row[column]}}
+          </td>
+        </tr>
+     </div>
+    </div>
+    <div class="all-headers">
 
-<br><br>
-
-
- <table border="3">
-  <th>One-Stop</th>
-  <tr>
-    <td>flightNumber</td>
-    <td>originationDate</td>
-    <td>departureStation</td>
-    <td>arrivalStation</td>
-    <td>latestDepartureTime</td>
-    <td>latestArrivalTime</td>
-  </tr>
-</table>
-<br>
-<table border ="2" id="flights">
-  <th *ngFor="let col of columns">Nonstop{{col}}</th>
-  <tr *ngFor="let fly of flight">
-    <td *ngFor="let col of index">{{flight[col]}}</td>
-  </tr>
-</table>
+      </div>
+      <div class="header-col">
+       <table class="block">
+         <th >Multi-Stop</th>
+      </table>
+      <table class="multistop">
+          <th *ngFor="let column of headers">
+            {{column}}
+          </th>
+        </table>
+        <div class="tabledata">
+          <tr *ngFor="let row of rows3">
+            <td *ngFor="let column of headers" >
+              {{row[column]}}
+            </td>
+          </tr>
+       </div>
+      </div>
+    <div class="all-headers">
+  </div>
+</div>

@@ -45,7 +45,6 @@ import {HttpClientModule} from '@angular/common/http';
     // GeofeedComponent,
     EventComponent,
     FlightsComponent,
-    //,
 
   ],
   imports: [
