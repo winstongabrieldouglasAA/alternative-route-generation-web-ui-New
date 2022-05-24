@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-import flights from './flights/flights.json';
+import { ArgFlightsServiceService } from '../arg-flights-service.service';
+import { RestService } from '../rest.service';
+import { flights } from '../flights';
 //table data-imports:
 export interface Aircraft {
   INBOUND: string;
@@ -123,9 +124,26 @@ export class HomePageComponent implements OnInit {
     // dataSourceb = Flights_DATA;
     dataSource = ELEMENT_DATA;
     value = '';
-  constructor() { }
+  constructor(private rs : RestService) {}
+
+columns= ["Flight Number", "origination Date", "departure Station", "arrival Station", "latest DepartureTime", "latest ArrivalTime","intOrDom"];
+
+index=["flightNumber", "originationDate", "departureStation", "arrivalStation", "latestDepartureTime", "latestArrivalTime","intOrDom"]
+
+flight : flights[] = [];
 
   ngOnInit(): void {
+    this.rs.getflights().subscribe
+    (
+      (response) =>
+      {
+        this.flight = response;
+      },
+      (error) =>
+      {
+        console.log("Error Occured"+ error);
+      }
+    )
   }
 
     }
