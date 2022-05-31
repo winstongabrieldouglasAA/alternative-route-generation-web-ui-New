@@ -1,56 +1,3 @@
-form {
-  background-color: #0078D2;
-  width: 35px;
-  height: 44px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 70px;
-  color: #ffff;
-  font-size: 24px;
-  font-family:AmericanSansLight,Helvetica,sans-serif;
-  margin-left: 790px;
-
-}
-input {
-  all: unset;
-  font: 20px system-ui;
-  color: #777;
-  height: 100%;
-  width: 100%;
-  padding: 6px 10px;
-}
-button {
-  all: unset;
-  cursor: pointer;
-  width: 44px;
-  height: 44px;
-}
-
-svg {
-  color: #fff;
-  fill: currentColor;
-  width: 24px;
-  height: 24px;
-  padding: 5px;
-  margin-left: -18px;
-}
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
-  margin-left: 560px;
-  color: #777;
-  background-color: rgb(238, 235, 235);
-border-radius: 50px;
-font-family: AmericanSansLight,Helvetica,sans-serif;
-  font-size: 20px;
-}
-
-.example-full-width {
-  width: 100%;
-}
 .header-card{
   width: 70%;
   position:relative;
@@ -62,4 +9,42 @@ font-family: AmericanSansLight,Helvetica,sans-serif;
   color: #777;
   width: 1095px;
   height: 45px;
+}
+form {
+  background-color: #0078D2;
+  width: 35px;
+  height: 44px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -65px;
+  color: #ffff;
+  font-size: 24px;
+  font-family:AmericanSansLight,Helvetica,sans-serif;
+  margin-left: 470px;
+  box-shadow: 3px 3px 2px rgb(102, 74, 102) ;
+
+
+}
+button {
+  all: unset;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+}
+
+svg {
+  color: #fff;
+  fill: currentColor;
+  width: 58px;
+  height: 24px;
+  padding: 5px;
+  margin-left: -18px;
+}
+.inputs{
+  display:inline-flexbox;
+  margin-top: 190px;
+  margin-left: 500px;
+  justify-content: space-between;
 }
