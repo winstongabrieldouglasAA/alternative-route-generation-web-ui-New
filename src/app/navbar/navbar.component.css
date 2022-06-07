@@ -6,18 +6,18 @@
   height: 60px;
   display: flex;
   align-items: center;
-  background-color: #0078D2;
+  background-color: #00467f;
   color: #faf4f4;
   font-weight: 600;
 }
 
 .navbar img {
   margin: 0 19px;
-  justify-content:inherit;
+  justify-content: inherit;
 }
-.Navbar{
-  justify-content:space-between;
+.Navbar {
+  justify-content: space-between;
 }
-span{
+span {
   padding-right: 1rem;
 }

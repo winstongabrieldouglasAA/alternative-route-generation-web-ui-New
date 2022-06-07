@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatInputModule} from '@angular/material/input';
 import { Router } from '@angular/router';
-import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-admin',
@@ -11,11 +10,12 @@ import { AuthService } from '../services/auth.service';
 export class AdminComponent implements OnInit {
   value = 'Enter Airport:';
 
-  constructor(private router : Router, private auth : AuthService) { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
   goRoutes(){
-    this.router.navigate(['Routes']);
+    this.router.navigate(['Routes'])
   }
+
 }

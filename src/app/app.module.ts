@@ -68,6 +68,6 @@ import {HttpClientModule} from '@angular/common/http';
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
