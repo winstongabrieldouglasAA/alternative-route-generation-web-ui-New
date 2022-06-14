@@ -21,9 +21,7 @@ import { AdminComponent } from './RecordLocator/admin.component';
 import { ArgAttributesComponent } from './Reroutings/arg-attributes.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatTableModule} from '@angular/material/table';
-import { AdminSettingsComponent } from './admin-settings/admin-settings.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
-import { MainPageComponent } from './Flight-Schedule/main-page.component';
 import { FormsModule } from '@angular/forms';
 import { FlightsComponent } from './Flight-Routes/flights/flights.component';
 import {HttpClientModule} from '@angular/common/http';
@@ -34,7 +32,6 @@ import {HttpClientModule} from '@angular/common/http';
     AdminComponent,
     routingComponents,//replaces the ArgAttributesComponent,MainPageComponent
     NavbarComponent,
-    AdminSettingsComponent,
     FlightsComponent,
 
   ],
