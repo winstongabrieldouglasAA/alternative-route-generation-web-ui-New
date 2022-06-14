@@ -16,16 +16,12 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FiltersComponent } from './filters/filters.component';
 import { HomePageComponent } from './Flight-Routes/home-page.component';
 import { AdminComponent } from './RecordLocator/admin.component';
 import { ArgAttributesComponent } from './Reroutings/arg-attributes.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatTableModule} from '@angular/material/table';
-import { SearchComponent } from './filters/search/search.component';
 import { AdminSettingsComponent } from './admin-settings/admin-settings.component';
-import { GeofeedComponent } from './geofeed/geofeed.component';
-import { EventComponent } from './Flight-Routes/event/event.component';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { MainPageComponent } from './Flight-Schedule/main-page.component';
 import { FormsModule } from '@angular/forms';
@@ -35,15 +31,10 @@ import {HttpClientModule} from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    FiltersComponent,
-    //HomePageComponent,
     AdminComponent,
     routingComponents,//replaces the ArgAttributesComponent,MainPageComponent
     NavbarComponent,
-    SearchComponent,
     AdminSettingsComponent,
-    // GeofeedComponent,
-    EventComponent,
     FlightsComponent,
 
   ],

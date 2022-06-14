@@ -16,5 +16,7 @@ export class NavbarComponent implements OnInit {
   }
   ngOnInit(): void {
   }
-
+goRoutes(){
+  this.router.navigate(['Routes'])
+}
 }
