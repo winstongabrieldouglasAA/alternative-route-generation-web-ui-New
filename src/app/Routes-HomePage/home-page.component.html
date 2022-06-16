@@ -1,0 +1,32 @@
+<app-navbar></app-navbar> <br /><br />
+<div style="margin-left: 280px; margin-right: 280px; margin-top: 50px">
+  <h2 style="margin-bottom: 0px">
+    <span style="color: #008712">Depart </span>
+    <span style="color: #00467f">from DFW to LAX</span>
+  </h2>
+  <h4 style="color: #627a88; margin-bottom: 50px">Friday, April 22, 2022</h4>
+  <div
+    *ngFor="let Route of Flights_DATA"
+    style="margin-bottom: 20px; background-color: white; border-radius: 6px"
+  >
+    <div
+      *ngFor="let Flight of Route; index as flightIndex"
+      style="display: flex; justify-content: space-between; padding: 13px"
+      [ngStyle]="{
+        'border-bottom':
+          Route.length > 1 && flightIndex !== Route.length - 1
+            ? '1px dashed #D0DAE0'
+            : '0px dashed #D0DAE0'
+      }"
+    >
+      <div style="display: flex">
+        <img src="../assets/logo.png" height="24px" width="24px" />
+        <p>{{ Flight.flightNumber }}</p>
+      </div>
+      <p>{{ Flight.departureStation }}</p>
+      <p>{{ Flight.arrivalStation }}</p>
+      <p>{{ Flight.latestDepartureTime }}</p>
+      <p>{{ Flight.latestArrivalTime }}</p>
+    </div>
+  </div>
+</div>

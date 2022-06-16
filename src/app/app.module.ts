@@ -16,23 +16,20 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomePageComponent } from './Flight-Routes/home-page.component';
+import { HomePageComponent } from './Routes-HomePage/home-page.component';
 import { AdminComponent } from './RecordLocator/admin.component';
-import { ArgAttributesComponent } from './Reroutings/arg-attributes.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatTableModule} from '@angular/material/table';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-import { FlightsComponent } from './Flight-Routes/flights/flights.component';
 import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     AdminComponent,
-    routingComponents,//replaces the ArgAttributesComponent,MainPageComponent
+    routingComponents,
     NavbarComponent,
-    FlightsComponent,
 
   ],
   imports: [

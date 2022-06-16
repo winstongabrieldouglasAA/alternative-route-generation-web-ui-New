@@ -7,12 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  typesOfFilters: string[] = ['arrivalStation', 'flightNumber'];
   showFiller = false;
   constructor(private router:Router) { }
 
   goToPage(pageName:string):void{
-    this.router.navigate([`${pageName}`]);
+    this.router.navigate(['RecordLocator']);
   }
   ngOnInit(): void {
   }
